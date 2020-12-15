@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mercado Liebre Argentina</title>
+    <%- include('./partials/head') %>
+</head>
+    <%- include('./partials/navbar') %>
+
+<section>
+<img class="banner" src="/images/img-home-banner.jpg">
+</section>
+
+<section class="ultimaVisita">
+<h3 class="titulo">Basado en tu última visita</h3>
+<div class="ultimaVisita-contenido">
+<% visited.forEach(producto => { %>
+    <article class="producto">
+        <a href="/producto/<%= producto.id %>">
+            <div class="producto-imagen">
+                <img width="100%" src="/images/products/<%= producto.image %>">
+            </div>
+            <div class="producto-descripcion">
+                <div class="producto-descripcion-separador">
+                    <div class="producto-descripcion-separador-linea">
+                    </div>
+                    <div class="producto-descripcion-separador-camion">
+                    <i class="fas fa-truck"></i>
+                    </div>
+                </div>
+                <div class="producto-precio">
+                    <p>$ <%= producto.price.toLocaleString('en-US').replace(',', '.'); %> </p>
+                </div>
+                <div class="producto-descuento">
+                    <p><%= producto.discount %>% OFF</p>
+                </div>
+                <div class="producto-titulo">
+                    <p><strong><%= producto.name %></strong></p>
+                </div>
+            </div>
+        </a>
+    </article>
+<% }); %>
+</div>
+</section>
+<section class="ofertas">
+    <a name="ofertas">
+    <h3 class="titulo">Ofertas</h3>
+    </a>
+<div class="ofertas-contenido">
+    <% inSale.forEach(producto => { %>
+<article class="producto">
+    <a href="/producto/<%= producto.id %>">
+        <div class="producto-imagen">
+            <img width="100%" src="/images/products/<%= producto.image %>">
+        </div>
+        <div class="producto-descripcion">
+            <div class="producto-descripcion-separador">
+                <div class="producto-descripcion-separador-linea">
+                </div>
+                <div class="producto-descripcion-separador-camion">
+                <i class="fas fa-truck"></i>
+                </div>
+            </div>
+            <div class="producto-precio">
+                <p>$ <%= producto.price.toLocaleString('en-US').replace(',', '.'); %> </p>
+            </div>
+            <div class="producto-descuento">
+                <p><%= producto.discount %>% OFF</p>
+            </div>
+            <div class="producto-titulo">
+                <p><strong><%= producto.name %></strong></p>
+            </div>
+        </div>
+    </a>
+    </article>
+    <% }); %>
+</div>
+</section>
+
+<%- include('./partials/footer') %>

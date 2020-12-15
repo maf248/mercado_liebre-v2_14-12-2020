@@ -1,0 +1,292 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+    font-size: 12px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.logo {
+    width: 50%;
+}
+.logo-imagen {
+    width: 100%;
+}
+.buscador {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.buscador-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5em;
+    background-color: #ebebeb;
+    border-radius: 5px;
+}
+.buscador-contenedor-texto {
+    border: 0px;
+    background-color: #ebebeb;
+    width: 90%;
+}
+.buscador-contenedor-buscar {
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px;
+}
+.navbar {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 0em;
+}
+.navbar a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+.navbar-izq {
+    display: flex;
+}
+.navbar-der {
+    display: flex;
+}
+.barraSuperior {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #eac926;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+}
+.barraSuperior p {
+    text-align: center;
+    width: 100%;
+    margin: 1em 1em 2em 1em;
+}
+.menu {
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    background-color: #0044AA;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.menu:hover {
+    background-color: #0022AA;
+    cursor: pointer;
+}
+.banner {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.6rem;
+}
+.ultimaVisita, .ofertas {
+    display: flex;
+    flex-direction: column;
+}
+.ofertas-contenido, .ultimaVisita-contenido {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.titulo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    border-radius: 50px;
+    text-align: center;
+}
+.producto {
+    align-self: center;
+    width: 80%;
+    padding: 1rem;
+    margin: 20px;
+    background-color: white;
+    border-top: 1px solid #ebebeb;
+    display: flex;
+    flex-direction: column;
+}
+.producto:hover {
+    box-shadow : 0px 0px 10px rgb(100,100,100);
+    cursor: pointer;
+}
+/*Nota sobre animacion del camion: no hice rotate(90deg) como en el video ejemplo, ya que utilicé otro icono de fontawesome y quedaba mal, preferí rotar la imagen en su eje X para el hover*/
+.producto:hover .producto-descripcion-separador-camion {
+    transform: scaleX(1);
+    transition: 300ms;
+}
+.producto img {
+    width: 100%;
+}
+.producto-descripcion-separador {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.producto-descripcion-separador-linea {
+    border-top: 1px solid black;
+    position: relative;
+    top: 0.8rem;
+    width: 90%;
+}
+.producto-descripcion-separador-camion {
+    transform: scaleX(-1);
+}
+.producto-descripcion-separador-camion i {
+    display: block;
+    text-align: right;
+    color: green;
+    font-size:1.3rem;
+}
+.producto-precio {
+    width: 40%;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.producto-descuento {
+    width: 55%;
+    display: inline-block;
+    color: green;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.producto-titulo {
+    margin-top: 1.2rem;
+}
+.producto-titulo {
+    display: none;
+}
+.producto:hover .producto-titulo {
+    display: flex;
+}
+.producto:hover .producto-descripcion-separador-camion {
+    transform: scaleY(1);
+}
+
+footer {
+    font-size: 0.8rem;
+    width: 90%;
+    height: auto;
+    margin: 1em 0px;
+    padding: 1.5em 5% 1.5em 5%;
+    background-color: #ebebeb;
+    border-radius: 20px;
+    text-align: center;
+}
+.piePag {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.piePag-articulo {
+    margin: 1.2em;
+}
+.iconos {
+    width: 2em;
+    height: 2em;
+    margin-bottom: 1em;
+}
+.copyrights {
+    margin-top: 1em;
+    font-style: italic;
+}
+/*Navegacion en tablets*/
+@media (min-width: 361px) {
+    .menu {
+        display: none;
+    }
+    .logo {
+        max-width: 20%;
+        margin-top: 0.5em;
+    }
+    .buscador {
+        max-width: 35%;
+        display: inline-block;
+        margin-top: 0.4rem;
+    }
+    .barraSuperior {
+        width: 100%;
+        padding: 1em;
+        justify-content: space-around;
+    }
+    .barraSuperior p {
+        width: 35%;
+        margin: 0px;
+        margin-top: 0.6rem;
+    }
+    .navbar {
+        display: flex;
+        width: 95%;
+    }
+    .navbar a {
+        font-size: 0.9em;
+        margin-right: 0.5em;
+    }
+    .ofertas-contenido, .ultimaVisita-contenido {
+        display: flex;
+        flex-direction: row;
+    }
+    .producto {
+        max-width: 30%;
+    }
+}
+/*Navegacion en desktop*/
+@media (min-width: 769px) {
+    .menu {
+        display: none;
+    }
+    .barraSuperior {
+        justify-content: space-around;
+    }
+    .navbar {
+        display: flex;
+    }
+    .buscador {
+        margin-top: 0.8rem;
+        width: 45%;
+    }
+    .barraSuperior p {
+        margin-top: 1rem;
+        max-width: 25%;
+    }
+    .navbar a {
+        font-size: 1.1em;
+        margin: 1em;
+        width: 95%;
+    }
+    .ofertas-contenido, .ultimaVisita-contenido {
+        display: flex;
+        flex-direction: row;
+    }
+    .producto {
+        width: 15%;
+    }
+    .piePag {
+        flex-direction: row;
+    }
+    
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="/stylesheets/style-detalles.css">
+    <title><%= producto.name %></title>
+    <%- include('./partials/head') %>
+</head>
+    <%- include('./partials/navbar') %>
+
+<section>
+        <div class="titulos">
+            <h1>Detalle del producto: </h1>
+            <h2><%= producto.name %></h2>
+        </div>
+        <div class="contenedor">
+            <div class="imagen-descripcion">
+                <img src="/images/products/<%= producto.image %>">
+                <p><%= producto.description %></p>
+            </div>
+            <div class="precio-comprar">
+                <h3><%= producto.name %></h3>
+                <% if (producto.discount != 0) { %>
+                <div class="precio-comprar-promos">
+                    <p class="precio-comprar-preciorebaja">$ <%= producto.price.toLocaleString('en-US').replace(',', '.') %></p>
+                    <p class="precio-comprar-separador">/</p>
+                    <p class="precio-comprar-descuento"><%= producto.discount %> % OFF</p>
+                </div>
+                <% } %>
+                <p class="precio-comprar-preciofinal">$ <%= precioFinal.toLocaleString('en-US').replace(',', '.') %></p>
+                <p class="precio-comprar-cuotasymas"><i class="fas fa-credit-card"></i> Pagá en 12 cuotas sin interes</p>
+                <p class="precio-comprar-cuotasymas"><i class="fas fa-store"></i> Retiro gratis en locales del vendedor</p>
+                <button>COMPRAR AHORA</button>
+            </div>
+        </div>
+</section>
+
+<%- include('./partials/footer') %>

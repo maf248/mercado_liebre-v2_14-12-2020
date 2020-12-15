@@ -1,0 +1,172 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 20px 5%;
+}
+.titulos {
+    width: 100%;
+}
+.titulos h1 {
+    text-decoration: underline;
+}
+.titulos h1, h2 {
+    display: inline-block;
+    flex-wrap: wrap;
+    margin: 30px 10px;
+    font-size: 1.5em;
+    color: gray;
+}
+.contenedor {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 25px;
+    margin: 20px 0%;
+    width: 100%;
+}
+.imagen-descripcion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.imagen-descripcion img {
+    align-self: center;
+    justify-self: center;
+    width: 60%;
+}
+.imagen-descripcion p {
+    font-size: 1.6em;
+}
+.precio-comprar {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-top: 1px solid gray;
+}
+.precio-comprar h3 {
+    font-size: 2em;
+}
+.precio-comprar-promo {
+    width: 100%;
+}
+.precio-comprar-preciorebaja {
+    text-decoration: line-through;
+}
+.precio-comprar-preciorebaja, .precio-comprar-descuento, .precio-comprar-separador {
+    font-size: 1em;
+    display: inline-block;
+    padding: 30px 5px 10px 5px;
+    color: green;
+}
+.precio-comprar-preciofinal {
+    padding: 10px 0px;
+    font-size: 3em;
+}
+.precio-comprar-cuotasymas {
+    margin: 20px 0px;
+    font-size: 0.7em;
+    color: gray;
+}
+.precio-comprar-cuotasymas i {
+    color: green;
+    margin-right: 10px;
+}
+.precio-comprar button {
+    width: 100%;
+    margin-top: 50px;
+    height: 40px;
+    color: white;
+    background-color: #0044AA;
+    border: 1px solid #0044AA;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media (min-width: 361px) {
+    .imagen-descripcion img {
+        align-self: center;
+        justify-self: center;
+        width: 90%;
+    }
+    .precio-comprar h3 {
+        font-size: 2.5em;
+    }
+    .contenedor {
+        flex-direction: column;
+    }
+    .precio-comprar-cuotasymas {
+        font-size: 1.5em;
+    }
+}
+@media (min-width: 500px) {
+    .titulos h1, h2 {
+        font-size: 2em;
+    }
+    .imagen-descripcion {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .imagen-descripcion img {
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        max-width: 600px;
+    }
+    .precio-comprar h3 {
+        font-size: 1.5em;
+    }
+    .precio-comprar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 35%;
+        padding: 20px;
+        border: none;
+        border-left: 1px solid gray;
+    }
+    .precio-comprar-preciorebaja, .precio-comprar-descuento, .precio-comprar-separador {
+        font-size: 1.2em;
+    }
+    .precio-comprar-preciofinal {
+        padding: 10px 0px;
+        font-size: 2.7em;
+    }
+    .precio-comprar-cuotasymas {
+        font-size: 1em;
+    }
+    .contenedor {
+        flex-direction: row;
+    }
+}
+@media (min-width: 769px) {
+    .precio-comprar h3 {
+        font-size: 2.5em;
+    } 
+    .precio-comprar-preciorebaja, .precio-comprar-descuento, .precio-comprar-separador {
+        font-size: 1.5em;
+    }
+    .precio-comprar-preciofinal {
+        padding: 10px 0px;
+        font-size: 4em;
+    }
+    .precio-comprar-cuotasymas {
+        font-size: 1.5em;
+    }
+    .contenedor {
+        flex-direction: row;
+    }
+}

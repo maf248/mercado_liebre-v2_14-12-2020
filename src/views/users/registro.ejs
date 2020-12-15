@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="/stylesheets/style-formulario.css">
+    <title>Mercado Liebre - Registrarse</title>
+    <%- include('../partials/head') %>
+</head>
+    <%- include('../partials/navbar') %>
+
+<center>
+    <form class="registerForm" action="/">
+        <h1>Registrese completando los datos requeridos:</h1>
+            <input class="campos" type ="name" placeholder="Nombre y Apellido" alt="Ingrese su nombre y apellido" value=""></input><br>
+            <input class="campos" type="username" placeholder="Nombre de usuario" alt="Ingrese su nombre de usuario" value=""></input><br>
+            <input class="campos" type="email" placeholder="E-mail" alt="Ingrese su correo electrónico" value=""></input><br>
+            <label class="campos" for="nacimiento">Fecha de nacimiento:</label><br>
+            <input class="campos" type="date" id="nacimiento" alt="Ingrese su fecha de nacimiento" value=""></input><br>
+            <input class="campos" type="street-address" placeholder="Domicilio"></input><br>
+        <h2>Perfil del usuario</h2>
+        <div class="perfil-usuario">
+            <input type="radio" value="Comprador" name="perfil">Comprador</input>
+            <input type="radio" value="Vendedor" name="perfil">Vendedor</input>
+        </div>
+        <h2>Intereses</h2>
+        <div class="intereses-usuario">
+            
+            <input type="checkbox" id="electro" value="Electro" name="intereses"></input>
+            <label for="electro">Electro</label>
+            <input type="checkbox" id="moda" value="Moda" name="intereses"></input>
+            <label for="moda">Moda</label>
+            <input type="checkbox" id="hogar" value="Hogar" name="intereses"></input>
+            <label for="hogar">Hogar</label>
+            <input type="checkbox" id="jugueteria" value="Juguetería" name="intereses"></input>
+            <label for="jugueteria">Juguetería</label>
+            <input type="checkbox" id="vida-sana" value="Vida sana" name="intereses"></input>
+            <label for="vida-sana">Vida sana</label>
+        </div>
+        <h2>Elegí tu foto de usuario</h2>
+            <input class="campos" type="file"></input><br>
+            <input class="campos" type="password" placeholder="Elegí tu contraseña"></input>
+            <input class="campos" type="password" placeholder="Confirmá tu contraseña"></input><br>
+            <input class="campos" target="enviar" type="submit" value="Enviar">
+            <input class="campos" target="borrar" type="reset" value="Borrar">
+    </form>
+</center>
+<%- include('../partials/footer') %>

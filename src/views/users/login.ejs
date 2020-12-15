@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="/stylesheets/style-formulario.css">
+    <title>Mercado Liebre - Ingresar</title>
+    <%- include('../partials/head') %>
+</head>
+    <%- include('../partials/navbar') %>
+
+<center>
+
+    <form class="loginForm" action="/">
+        <h1>Ingrese a su cuenta:</h1>
+        <input class="campos" type="username" placeholder="Nombre de usuario" alt="Ingrese su nombre de usuario" value=""></input><br>
+        <input class="campos" type="password" placeholder="Elegí tu contraseña"></input><br>
+        <input class="campos" target="enviar" type="submit" value="Enviar">
+    </form>
+
+</center>
+
+<%- include('../partials/footer') %>
